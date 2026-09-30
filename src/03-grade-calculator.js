@@ -1,4 +1,4 @@
-/**
+ /**
  * 📝 Ms. Parker's Report Cards
  *
  * Ms. Parker teaches 8th-grade science and needs help converting
@@ -26,4 +26,49 @@
  */
 export function calculateGrade(score, hasExtraCredit) {
   // Your code here
+  let grade,bonusPoints;
+  if(score<0 || score >100) return "INVALID";
+  // if(score>=90){
+    
+  // }
+  // else if(score>=80){
+  //   score;
+  // }
+  // else if(score >=70){
+  //   score;
+  // }
+  // else if(score>=60){
+  //   score;
+  // }
+  // else if(score>=0){
+  //   score;
+  // }
+  if(hasExtraCredit===true){
+    bonusPoints = 5;
+  }else{
+    bonusPoints = 0;
+  }
+  
+// const result = score+hasExtraCredit>100? 100:score+hasExtraCredit;
+  let total = score + bonusPoints;
+  if(total>100){
+   total = 100;
+  }else{
+    total=score+bonusPoints;
+  }
+
+  if(total>=90){
+    return "A";
+  }else if(total>=80){
+    return "B";
+  }else if(total>=70){
+    return "C";
+  }
+  else if(total>=60){
+    return "D";
+  }
+  else if(total >=0){
+    return "F";
+  }
+
 }
