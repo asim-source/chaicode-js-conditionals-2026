@@ -30,7 +30,7 @@
  * @param {{ whippedCream?: boolean, extraShot?: boolean }} extras - Optional extras
  * @returns {number} Total price or -1 for invalid input
  */
-export function calculateCoffeePrice(size, type, extras = {whippedCream:Boolean,extraShot:Boolean}) {
+export function calculateCoffeePrice(size, type, extras = {}) {
   // Your code here
   let price, priceType, extraCream, shot;
   if (size !== "small" && size !== "medium" && size !== "large") return -1;
