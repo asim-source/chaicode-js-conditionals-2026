@@ -52,12 +52,12 @@ export function calculateTip(billAmount, serviceRating) {
   taValue = billAmount + tValue;
   return{
     tipPercentage:pValue,
-    tipAmount:tValue,
-    totalAmount:taValue,
+    tipAmount:Number(tValue.toFixed(2)),
+    totalAmount:Number(taValue.toFixed(2)),
   }
 }
-    console.log(calculateTip(50,2));
-  
+   
+  console.log(calculateTip(44,5));
   
   
   
